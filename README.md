@@ -2,6 +2,7 @@
 نصب اسان و مرحله به مرحله تانل اضطراری slipstream 
 
 1 - توخارج و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو پوشه روت 
+
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-kharej.tar.gz
 2 - سرویس ایجاد شده رو ویرایش کنید
 nano /etc/systemd/system/slipstream.service
