@@ -1,4 +1,5 @@
 # slipstream-evilcu
+# ظاهراً خار cpu ایرانو رو پیوند میزنه با htop چک کنید اگه چسبیده بود ریبوت کنید سرور رو 
 نصب اسان و مرحله به مرحله تانل اضطراری slipstream 
 
 1 - توخارج و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو دایرکتوری روت 
@@ -33,8 +34,11 @@ openssl req -x509 -newkey rsa:2048 -nodes \
 
 
 sudo systemctl daemon-reload
+
 sudo systemctl enable slipstream
+
 sudo systemctl start slipstream
+
 sudo systemctl status slipstream
 
 
@@ -44,6 +48,7 @@ sudo systemctl status slipstream
 
 
 iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-port 5300
+
 iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-port 5300
 
 
@@ -56,7 +61,9 @@ iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-port 5300
 
 
 sysctl -w net.netfilter.nf_conntrack_max=262144
+
 sysctl -w net.netfilter.nf_conntrack_udp_timeout=15
+
 sysctl -w net.netfilter.nf_conntrack_udp_timeout_stream=60
 
 
@@ -96,8 +103,11 @@ nano /etc/systemd/system/slipstream.service
 
 
 sudo systemctl daemon-reload
+
 sudo systemctl enable slipstream
+
 sudo systemctl start slipstream
+
 sudo systemctl status slipstream
 
 
@@ -108,8 +118,17 @@ sudo systemctl status slipstream
 بعد هر تغییر در سرویس پاید
 
 sudo systemctl daemon-reload
+
 sudo systemctl restart slipstream
 
 بزنید .
+
+یه کرون تب کم ایجاد کنید تا هر چند دقیقه تانلو ریستارت کنه تا کرش نکنه اگرم دیدین cpu چسبید ریبوت کنید . فقط ایران
+
+crontab -e
+
+*/10 * * * * systemctl restart slipstream
+
+هر ده دقیقه تانلو ری‌ستارت میکنه . فقط تو ایران لازمه
 موفق باشد .
 by Evil
