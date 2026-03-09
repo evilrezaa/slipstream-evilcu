@@ -2,8 +2,12 @@
 نصب اسان و مرحله به مرحله تانل اضطراری slipstream 
 
 1 - توخارج و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو پوشه روت 
-
+cd /root
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-kharej.tar.gz
+
+بعدش این‌دستور رو برای استخراج بزنید این دستور فایلهای لازم‌رو تو مسیر های خودشون قرار میده .
+
+tar -xzvf slip-evilcu-kharej.tar.gz -C /
 
 
 2 - سرویس ایجاد شده رو ویرایش کنید
@@ -62,10 +66,16 @@ sysctl -w net.netfilter.nf_conntrack_udp_timeout_stream=60
 
 # الان توی ایران هم این پایینی هارو انجام بدین 
 
- - تو ایران و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو پوشه روت
-
+ - تو ایران و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو دایرکتوری روت
  - 
+
+cd /root
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-iran.tar.gz
+
+
+بعدش این‌دستور رو برای استخراج بزنید این دستور فایلهای لازم‌رو تو مسیر های خودشون قرار میده .
+
+tar -xzvf slip-evilcu-iran.tar.gz -C /
 
 
 2 - سرویس ایجاد شده رو ویرایش کنید
