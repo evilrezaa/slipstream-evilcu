@@ -4,6 +4,7 @@
 1 - توخارج و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو دایرکتوری روت 
 
 cd /root
+
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-kharej.tar.gz
 
 بعدش این‌دستور رو برای استخراج بزنید این دستور فایلهای لازم‌رو تو مسیر های خودشون قرار میده .
@@ -71,6 +72,7 @@ sysctl -w net.netfilter.nf_conntrack_udp_timeout_stream=60
  - 
 
 cd /root
+
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-iran.tar.gz
 
 
