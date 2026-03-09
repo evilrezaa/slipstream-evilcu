@@ -62,7 +62,7 @@ sysctl -w net.netfilter.nf_conntrack_udp_timeout_stream=60
 
 # الان توی ایران هم این پایینی هارو انجام بدین 
 
- - توخارج و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو پوشه روت
+ - تو ایران و توی دایرکتوری روت ابن دستور رو بزنید تا فایل فشرده رو دانلود کنه تو پوشه روت
 
  - 
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-iran.tar.gz
