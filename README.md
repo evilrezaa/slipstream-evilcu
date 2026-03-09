@@ -56,7 +56,9 @@ iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-port 5300
 
 
 1 GB RAM: 131072
+
 2-4 GB RAM: 262144
+
 8 GB+ RAM: 524288
 
 
