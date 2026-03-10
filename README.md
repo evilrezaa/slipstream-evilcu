@@ -23,7 +23,11 @@ nano /etc/systemd/system/slipstream.service
 بعد کل این دستورات پایینی رو کپی کنید و توی دایرکتوری روت بزنید تا سرت هارو بسازه اینا فقط تو این سرور کاربرد دارن نیازی به هیچی نیست دامنه خودتون رو بزنید آخرش
 
 ```bash
-openssl req -x509 -newkey rsa:2048 -nodes \ -keyout key.pem \ -out cert.pem \ -days 3650 \ -subj "/CN=t.example.com"
+openssl req -x509 -newkey rsa:2048 -nodes \
+-keyout key.pem \
+-out cert.pem \
+-days 3650 \
+-subj "/CN=l.evilcu.com"
 ```
 
 بعد این دستورات رو بزنید
