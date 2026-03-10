@@ -6,7 +6,7 @@
 
 ```bash
 cd /root
-wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-iran.tar.gz
+wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-kharej.tar.gz
 ```
 
 بعدش این‌دستور رو برای استخراج بزنید این دستور فایلهای لازم‌رو تو مسیر های خودشون قرار میده .
