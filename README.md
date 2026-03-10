@@ -62,9 +62,9 @@ iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-port 5300
 
 
 ```bash
-net.netfilter.nf_conntrack_max = 262144
-net.netfilter.nf_conntrack_udp_timeout = 15
-net.netfilter.nf_conntrack_udp_timeout_stream = 60
+sysctl -w net.netfilter.nf_conntrack_max=262144
+sysctl -w net.netfilter.nf_conntrack_udp_timeout=15
+sysctl -w net.netfilter.nf_conntrack_udp_timeout_stream=60
 ```
 
 
