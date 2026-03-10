@@ -24,7 +24,7 @@ nano /etc/systemd/system/slipstream.service
 
 ```bash
 openssl req -x509 -newkey rsa:2048 -nodes \ -keyout key.pem \ -out cert.pem \ -days 3650 \ -subj "/CN=t.example.com"
-
+```
 
 بعد این دستورات رو بزنید
 
