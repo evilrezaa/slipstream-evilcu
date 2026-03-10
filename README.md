@@ -9,14 +9,14 @@ cd /root
 wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbypass/slip-evilcu-kharej.tar.gz
 
 بعدش این‌دستور رو برای استخراج بزنید این دستور فایلهای لازم‌رو تو مسیر های خودشون قرار میده .
-
+```bash
 tar -xzvf slip-evilcu-kharej.tar.gz -C /
-
+```
 
 2 - سرویس ایجاد شده رو ویرایش کنید
-
+```bash
 nano /etc/systemd/system/slipstream.service
-
+```
 بجای پورت 3389 پورت اینباند پنل رو بزنید و بجای t.example.com هم دامنه ای که با رکورد ns دارید رو بزنید 
 بعد Ctrl X و اینتر 
 
@@ -33,24 +33,22 @@ openssl req -x509 -newkey rsa:2048 -nodes \
 بعد این دستورات رو بزنید
 
 
+```bash
 sudo systemctl daemon-reload
-
 sudo systemctl enable slipstream
-
 sudo systemctl start slipstream
-
 sudo systemctl status slipstream
+```
 
 
 بعد اکتیو و رانینگ رو باس ببینین .
 حالا پورت 53 رو باید ریدایرکت کنید به پورت این سرویس ... اگه قبلاً سرویس های dnstt یا slipstream رو روی سرور خارج نصب کردین ترجیحاً حذف کنید یا اگه بلدین غیرفعال کنید ریدایرکت های قبلی رو اگرم بلد نیستی برو ریبیلد کن .
 حالا پورت 53 رو به این سرویس ریدایرکت میکنیم دستورات زیر رو بزنید 
 
-
+```bash
 iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-port 5300
-
 iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-port 5300
-
+```
 
 این پایینی هارو هم بزنید و بر اساس رم سرور اون عدد مکس رو تغییر بدین 
 
@@ -62,11 +60,11 @@ iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-port 5300
 8 GB+ RAM: 524288
 
 
+```bash
 sysctl -w net.netfilter.nf_conntrack_max=262144
-
 sysctl -w net.netfilter.nf_conntrack_udp_timeout=15
-
 sysctl -w net.netfilter.nf_conntrack_udp_timeout_stream=60
+```
 
 
 
@@ -86,15 +84,15 @@ wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/sos-frpbyp
 
 
 بعدش این‌دستور رو برای استخراج بزنید این دستور فایلهای لازم‌رو تو مسیر های خودشون قرار میده .
-
+```bash
 tar -xzvf slip-evilcu-iran.tar.gz -C /
-
+```
 
 2 - سرویس ایجاد شده رو ویرایش کنید
 
-
+```bash
 nano /etc/systemd/system/slipstream.service
-
+```
 
 و بجای پورت 3389 پورت اینباند پنل رو بزنید و بجای t.example.com هم دامنه ای که با رکورد ns دارید رو بزنید 
 
@@ -104,13 +102,12 @@ nano /etc/systemd/system/slipstream.service
 بعد اینارو تو ایران بزنید
 
 
+```bash
 sudo systemctl daemon-reload
-
 sudo systemctl enable slipstream
-
 sudo systemctl start slipstream
-
 sudo systemctl status slipstream
+```
 
 
 تو وضعیت باید INFO Connection ready رو ببینید و اگه نبود ینی اتصال برقرار نیست . البته چک کنید شاید برقرارم باشه ایرانه دیگه .
@@ -119,18 +116,20 @@ sudo systemctl status slipstream
 
 بعد هر تغییر در سرویس پاید
 
+```bash
 sudo systemctl daemon-reload
-
 sudo systemctl restart slipstream
+```
 
 بزنید .
 
 یه کرون تب کم ایجاد کنید تا هر چند دقیقه تانلو ریستارت کنه تا کرش نکنه اگرم دیدین cpu چسبید ریبوت کنید . فقط ایران
-
+```bash
 crontab -e
-
+```
+```bash
 */10 * * * * systemctl restart slipstream
-
+```
 هر ده دقیقه تانلو ری‌ستارت میکنه . فقط تو ایران لازمه
 موفق باشد .
 by Evil
