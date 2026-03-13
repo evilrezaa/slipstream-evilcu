@@ -4,7 +4,7 @@
 ## پنل رو سرور خارج نصب میشه
 ## اگه یهو تانل قطع شد به هیچی دست نزنید خودش اوکی میشه
 ## ممکنه پورتی که انتخاب کردید تو فایروال سرور ایران بسته شده باشه توصیه میکنم از همون پیشفرض 3389 استفاده کنید
-
+### اگه دسترسی ssh به سرور قطع شد از سایتی که سرور رو خریدین سرور رو ریبوت کنید البته خیلی کم پیش میاد
 
 # دستورات سرور خارج
 
@@ -151,6 +151,7 @@ nano /etc/systemd/system/slipstream.service
 sudo systemctl daemon-reload
 sudo systemctl enable slipstream
 sudo systemctl start slipstream
+sudo systemctl restart slipstream
 sudo systemctl status slipstream
 ```
 
