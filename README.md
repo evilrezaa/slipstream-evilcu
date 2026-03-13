@@ -9,7 +9,7 @@
 # دستورات سرور خارج
 
 
-1 - تو سرور خارج و توی دایرکتوری root این دستور رو بزنید تا فایل فشرده رو دانلود کنه
+تو سرور خارج و توی دایرکتوری root این دستور رو بزنید تا فایل فشرده رو دانلود کنه
 
 ```bash
 cd /root
@@ -21,7 +21,7 @@ wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/gfy-dpi/sl
 tar -xzvf slip-evilcu-kharej2.tar.gz -C /
 ```
 
-2 - سرویس ایجاد شده رو ویرایش کنید
+سرویس ایجاد شده رو ویرایش کنید
 ```bash
 nano /etc/systemd/system/slipstream.service
 ```
@@ -99,7 +99,7 @@ sudo systemctl status slipstream-cpu-monitor
 
 # الان توی ایران هم این پایینی هارو انجام بدین 
 
- - تو سرور ایران و توی دایرکتوری root این دستور رو بزنید تا فایل فشرده رو دانلود کنه
+تو سرور ایران و توی دایرکتوری root این دستور رو بزنید تا فایل فشرده رو دانلود کنه
 
 ```bash
 cd /root
@@ -133,7 +133,7 @@ sudo mv /home/cloud-admin/slipstream-evilcu-iran2.tar.gz /root/
 tar -xzvf slip-evilcu-iran2.tar.gz -C /
 ```
 
-2 - سرویس ایجاد شده رو ویرایش کنید
+سرویس ایجاد شده رو ویرایش کنید
 
 ```bash
 nano /etc/systemd/system/slipstream.service
