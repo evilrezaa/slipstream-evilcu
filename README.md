@@ -109,7 +109,7 @@ wget https://github.com/evilrezaa/slipstream-evilcu/releases/download/gfy-dpi/sl
 دانلود از آپلودسنتر ایرانی برای سهولت استفاده
 ```bash
 cd /root
-wget --content-disposition https://netnest.org/api/storage/share/ddb93aaaf7693b246c0c892b7f7dcd9a6a2ecafe440661d8e5f8d8bcd903b61c/download/
+wget --no-check-certificate --content-disposition https://netnest.org/api/storage/share/ddb93aaaf7693b246c0c892b7f7dcd9a6a2ecafe440661d8e5f8d8bcd903b61c/download/
 ```
 اگه لینک بالا خطا داد این دوتا نیم سرور پایین‌تر رو به این فایل پایین اضافه کنید
 ```bash
@@ -118,6 +118,10 @@ nano /etc/resolv.conf
 ```bash
 nameserver 217.218.127.127
 nameserver 217.218.155.155
+```
+یا در مواقعی که دوتا نیم سرور بالا کار نکردن از این یکی استفاده کنید 
+```bash
+nameserver 78.157.42.100
 ```
 اگه لینک بالا کار نکرد این روش پایینو انجام بدین 
 چون الان سرور های ایران به نت دسترسی ندارن فایل slip-evilcu-iran2.tar.gz رو از releases دانلود کنید و با sftp بزاریدش توی دایرکتوری root یا اگه
@@ -184,9 +188,9 @@ sudo systemctl status slipstream-cpu-monitor
 crontab -e
 ```
 ```bash
-*/10 * * * * systemctl restart slipstream
+*/1 * * * * systemctl restart slipstream
 ```
-هر ده دقیقه تانلو ری‌ستارت میکنه . فقط تو ایران لازمه
+هر یک دقیقه تانلو ری‌ستارت میکنه . فقط تو ایران لازمه
 
 # پیشنهادی
 با توجه به تجربه ای که این مدت داشتم با mtu پایین بهتر جواب میده البته تست کنید ببینید بهترینش
